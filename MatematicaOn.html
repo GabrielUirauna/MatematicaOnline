@@ -6,34 +6,38 @@
         <title>Matemática Online por: Gabriel e Filipe</title>
     </header>
     <body>
-        <div class="MainMenu">
+        <script src='./main.js'>onInitialize()</script>
+        <div class="MainMenu" style='display: block'>
             <button class="StartGame" onclick="QuestionLoaderHandler()">Jogar</button>
+            <button class="Credits" onclick="document.getElementsByClassName('CreditsScreen')[0].style.display = 'block'; document.getElementsByClassName('MainMenu')[0].style.display = 'none';">Créditos</button>
         </div>
-        <div class="Questions">
+        <div class="Questions" style='display: none'>
             <h2 class="QuestionTitle">Título</h2>
             <div class="Answers">
-                <button id="Answer1" onclick="QuestionButtonHandler(1)">Resposta1</button>
-                <button id="Answer2" onclick="QuestionButtonHandler(2)">Resposta2</button>
-                <button id="Answer3" onclick="QuestionButtonHandler(3)">Resposta3</button>
-                <button id="Answer4" onclick="QuestionButtonHandler(4)">Resposta4</button>
-                <button id="Answer5" onclick="QuestionButtonHandler(5)">Resposta5</button>
-                <button id="Answer6" onclick="QuestionButtonHandler(6)">Resposta6</button>
+                <button id="Answer1" onclick="verifyResponse(1)">Resposta1</button>
+                <button id="Answer2" onclick="verifyResponse(2)">Resposta2</button>
+                <button id="Answer3" onclick="verifyResponse(3)">Resposta3</button>
+                <button id="Answer4" onclick="verifyResponse(4)">Resposta4</button>
+                <button id="Answer5" onclick="verifyResponse(5)">Resposta5</button>
+                <button id="Answer6" onclick="verifyResponse(6)">Resposta6</button>
             </div>
         </div>
-        <div class="Correct">
+        <div class="Correct" style='display: none'>
             <button class="GoToNextQuestion" onclick="QuestionLoaderHandler(true)">Próxima pergunta</button>
         </div>
-        <div class="Failed">
+        <div class="Failed" style='display: none'>
             <button class="TryAgain" onclick="QuestionLoaderHandler(false)">Tentar novamente</button>
         </div>
-        <div class="CreditsScreen">
+        <div class="CreditsScreen" style='display: none'>
+            <button class="BackToMenuFromCredits" onclick="document.getElementsByClassName('CreditsScreen')[0].style.display = 'none'; document.getElementsByClassName('MainMenu')[0].style.display = 'block';">Voltar</button>
             <p>Filipe Santos</p>
             <p>Gabriel Moureira</p>
             <p>Emmanuel Florêncio</p>
             <p>João Francisco</p>
         </div>
-        <div class="Win">
+        <div class="Win" style="display: none">
             <h1>PARABÉNS! Você ganhou o jogo. :D</h1>
+            <button onclick='document.getElementsByClassName("Win")[0].style.display = "none"; document.getElementsByClassName("MainMenu")[0].style.display = "block"; CurrentQuestion=0'>Voltar ao inicio</button>
         </div>
     </body>
 </html>
