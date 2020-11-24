@@ -3,26 +3,37 @@
     <header>
         <meta charset='utf-8'>
         <link rel="stylesheet" type="text/css" href="/staGeon/styles.css">
-        <title>Matematica Online por: Gabriel e filipex</title>
+        <title>Matemática Online por: Gabriel e Filipe</title>
     </header>
     <body>
         <div class="MainMenu">
-
+            <button class="StartGame" onclick="QuestionLoaderHandler()">Jogar</button>
         </div>
         <div class="Questions">
-            
+            <h2 class="QuestionTitle">Título</h2>
+            <div class="Answers">
+                <button id="Answer1" onclick="QuestionButtonHandler(1)">Resposta1</button>
+                <button id="Answer2" onclick="QuestionButtonHandler(2)">Resposta2</button>
+                <button id="Answer3" onclick="QuestionButtonHandler(3)">Resposta3</button>
+                <button id="Answer4" onclick="QuestionButtonHandler(4)">Resposta4</button>
+                <button id="Answer5" onclick="QuestionButtonHandler(5)">Resposta5</button>
+                <button id="Answer6" onclick="QuestionButtonHandler(6)">Resposta6</button>
+            </div>
         </div>
         <div class="Correct">
-            
+            <button class="GoToNextQuestion" onclick="QuestionLoaderHandler(true)">Próxima pergunta</button>
         </div>
         <div class="Failed">
-            
+            <button class="TryAgain" onclick="QuestionLoaderHandler(false)">Tentar novamente</button>
         </div>
         <div class="CreditsScreen">
-            
+            <p>Filipe Santos</p>
+            <p>Gabriel Moureira</p>
+            <p>Emmanuel Florêncio</p>
+            <p>João Francisco</p>
         </div>
         <div class="Win">
-            
+            <h1>PARABÉNS! Você ganhou o jogo. :D</h1>
         </div>
     </body>
 </html>
