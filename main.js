@@ -1,13 +1,13 @@
 var CurrentQuestion = 0;
 
 const Questions = [
-    ['Pergunta1', 'RespostaCerta', 'RespostaErrada1', 'RespostaErrada2', 'RespostaErrada3', 'RespostaErrada4'],
-    ['Pergunta2', 'RespostaCerta', 'RespostaErrada1', 'RespostaErrada2', 'RespostaErrada3', 'RespostaErrada4'],
-    ['Pergunta3', 'RespostaCerta', 'RespostaErrada1', 'RespostaErrada2', 'RespostaErrada3', 'RespostaErrada4'],
-    ['Pergunta4', 'RespostaCerta', 'RespostaErrada1', 'RespostaErrada2', 'RespostaErrada3', 'RespostaErrada4'],
-    ['Pergunta5', 'RespostaCerta', 'RespostaErrada1', 'RespostaErrada2', 'RespostaErrada3', 'RespostaErrada4'],
-    ['Pergunta6', 'RespostaCerta', 'RespostaErrada1', 'RespostaErrada2', 'RespostaErrada3', 'RespostaErrada4'],
-    ['Pergunta7', 'RespostaCerta', 'RespostaErrada1', 'RespostaErrada2', 'RespostaErrada3', 'RespostaErrada4']
+    ['Determine o valor de x na equação: x² -16 = 0', '4', '1', '2', '5', '6'],
+    ['Assinale a alternativa em que a equação do 2° grau esteja completa.', '3x² -2x + 2 = 0', '5x² -2 = 0', 'x² + 4x = 0', 'x² + 25 = 0', 'x³ + 2x² + 10 = 0'],
+    ['Sabendo que que x = 5, determine o resultado da equação a seguir: 2x² + 3x -10 = ?', '55', '50', '59', '72', '78'],
+    ['Identifique quem é A, B e C: 65x² + 25x + 10 = 0', 'a = 65 / b = 25 / c = 10', 'a = 10 / b = 65 / c = 25', 'a = 25 / b = 10 / c = 65', 'a = 32 / b = 13 / c = 47', 'a = 2 / b = 1 / c = -65'],
+    ['Descubra o Delta da equação a seguir: 2x² -3x -5 = 0', '49', '52', '42', '12', '22'],
+    ['Descubra o Delta da equação a seguir: 2x² + 7x + 5 = 0', '9', '12', '52', '42', '22'],
+    ['Descubra os valores de X na equação a seguir: 3x² -2x -8 = 0', '(-4/3; 2)', '(-3; 20)', '(-25/4; 3)', '(289/45; 26)', '(78/5; 12)']
 ]
 
 function shuffle(array) {

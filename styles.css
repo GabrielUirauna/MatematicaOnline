@@ -4,5 +4,217 @@ body {
     top: 0;
     left: 0;
     background-size: 100vw 100vh;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+.MainMenu {
+    position: absolute;
+    margin: -8px;
+    background-color: #111E;
+    width: 70vw;
+    height: 95vh;
+    left: 15vw;
+    top: 0;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    color: #FFF;
+}
+
+.GameTitleMainMenu {
+    text-align: center;
+    font-size: 5vw;
+}
+
+.GameSubTitleMainMenu {
+    text-align: center;
+    font-size: 2.5vw;
+    margin-top: -2vw;
+}
+
+.MainMenu button {
+    width: 15vw;
+    height: 5vw;
+    border-radius: 5px;
+    border: 2px solid #FFAA00;
+    background-color: #000;
+    color: #FFF;
+    font-size: 2vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    cursor: pointer;
+}
+
+.Buttons {
+    margin-top: 15vw;
+    margin-left: 16vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.Questions {
+    position: absolute;
+    margin: -8px;
+    background-color: #111E;
+    width: 70vw;
+    height: 95vh;
+    left: 15vw;
+    top: 0;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    color: #FFF;
+}
+
+.QuestionTitle {
+    text-align: center;
+    font-size: 3vw;
+}
+
+.Answers {
+    margin-left: 22.5vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.Answers button {
+    width: 25vw;
+    height: 5vw;
+    border-radius: 5px;
+    border: 2px solid #FFAA00;
+    background-color: #000;
+    color: #FFF;
+    font-size: 2vw;
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+    cursor: pointer;
+}
+
+.Correct {
+    position: absolute;
+    margin: -8px;
+    background-color: #121E;
+    width: 70vw;
+    height: 95vh;
+    left: 15vw;
+    top: 0;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    color: #FFF;
+}
+
+.Correct button {
+    position: absolute;
+    margin-top: 40vh;
+    margin-left: 22.5vw;
+    width: 25vw;
+    height: 15vh;
+    border-radius: 5px;
+    border: 2px solid #024700;
+    background-color: #000;
+    color: #FFF;
+    font-size: 2vw;
+    margin-bottom: 0.5vw;
+    cursor: pointer;
+}
+
+.Congrats {
+    text-align: center;
+    font-size: 3vw;
+}
+
+.Failed {
+    position: absolute;
+    margin: -8px;
+    background-color: #211E;
+    width: 70vw;
+    height: 95vh;
+    left: 15vw;
+    top: 0;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    color: #FFF;
+}
+
+.fail {
+    text-align: center;
+    font-size: 3vw;
+}
+
+.TryAgain {
+    position: absolute;
+    margin-top: 40vh;
+    margin-left: 22.5vw;
+    width: 25vw;
+    height: 15vh;
+    border-radius: 5px;
+    border: 2px solid #470000;
+    background-color: #000;
+    color: #FFF;
+    font-size: 2vw;
+    margin-bottom: 0.5vw;
+    cursor: pointer;
+}
+
+.Win {
+    position: absolute;
+    margin: -8px;
+    background-color: rgba(25, 80, 25, 0.933);
+    width: 70vw;
+    height: 95vh;
+    left: 15vw;
+    top: 0;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    color: #FFF;
+}
+
+.Parabens {
+    text-align: center;
+    font-size: 3vw;
+}
+
+.Win button {
+    position: absolute;
+    margin-top: 40vh;
+    margin-left: 22.5vw;
+    width: 25vw;
+    height: 15vh;
+    border-radius: 5px;
+    border: 2px solid #d3ff5b;
+    background-color: #000;
+    color: #FFF;
+    font-size: 2vw;
+    margin-bottom: 0.5vw;
+    cursor: pointer;
+}
+
+.CreditsScreen {
+    position: absolute;
+    margin: -8px;
+    background-color: #111E;
+    width: 70vw;
+    height: 95vh;
+    left: 15vw;
+    top: 0;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    color: #FFF;
+}
+
+.CreditsScreen p {
+    text-align: center;
+    font-size: 3vw;
+}
+
+.CreditsScreen button {
+    position: absolute;
+    margin-top: 1vh;
+    margin-left: 1vw;
+    width: 15vw;
+    height: 10vh;
+    border-radius: 5px;
+    border: 2px solid #9a5bff;
+    background-color: #000;
+    color: #FFF;
+    font-size: 2vw;
+    cursor: pointer;
+}

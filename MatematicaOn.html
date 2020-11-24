@@ -9,9 +9,11 @@
         <script src='./main.js'>onInitialize()</script>
         <div class="MainMenu" style='display: block'>
             <h1 class="GameTitleMainMenu">Matemática Online</h1>
-            <h3 class="GameTitleMainMenu">O jogo offline de matemática</h3>
-            <button class="StartGame" onclick="QuestionLoaderHandler()">Jogar</button>
-            <button class="Credits" onclick="document.getElementsByClassName('CreditsScreen')[0].style.display = 'block'; document.getElementsByClassName('MainMenu')[0].style.display = 'none';">Créditos</button>
+            <h3 class="GameSubTitleMainMenu">O jogo offline de matemática</h3>
+            <div class="Buttons">
+                <button class="StartGame" onclick="QuestionLoaderHandler()">Jogar</button>
+                <button class="Credits" onclick="document.getElementsByClassName('CreditsScreen')[0].style.display = 'block'; document.getElementsByClassName('MainMenu')[0].style.display = 'none';">Créditos</button>
+            </div>
         </div>
         <div class="Questions" style='display: none'>
             <h2 class="QuestionTitle">Título</h2>
@@ -24,9 +26,11 @@
             </div>
         </div>
         <div class="Correct" style='display: none'>
+            <h2 class="Congrats">Parabéns! você acertou :D</h2>
             <button class="GoToNextQuestion" onclick="QuestionLoaderHandler(true)">Próxima pergunta</button>
         </div>
         <div class="Failed" style='display: none'>
+            <h2 class="fail">Que pena, você errou ;-;</h2>
             <button class="TryAgain" onclick="QuestionLoaderHandler(false)">Tentar novamente</button>
         </div>
         <div class="CreditsScreen" style='display: none'>
@@ -35,9 +39,10 @@
             <p>Gabriel Moureira</p>
             <p>Emmanuel Florêncio</p>
             <p>João Francisco</p>
+            <p>José Ricardo</p>
         </div>
         <div class="Win" style="display: none">
-            <h1>PARABÉNS! Você ganhou o jogo. :D</h1>
+            <h1 class="Parabens">PARABÉNS! Você ganhou o jogo. :D</h1>
             <button onclick='document.getElementsByClassName("Win")[0].style.display = "none"; document.getElementsByClassName("MainMenu")[0].style.display = "block"; CurrentQuestion=0'>Voltar ao inicio</button>
         </div>
     </body>
