@@ -2,12 +2,14 @@
 <html lang="pt">
     <header>
         <meta charset='utf-8'>
-        <link rel="stylesheet" type="text/css" href="/staGeon/styles.css">
-        <title>Matemática Online por: Gabriel e Filipe</title>
+        <link rel="stylesheet" type="text/css" href="./styles.css">
+        <title>Matemática Online: O jogo offline de matemática.</title>
     </header>
     <body>
         <script src='./main.js'>onInitialize()</script>
         <div class="MainMenu" style='display: block'>
+            <h1 class="GameTitleMainMenu">Matemática Online</h1>
+            <h3 class="GameTitleMainMenu">O jogo offline de matemática</h3>
             <button class="StartGame" onclick="QuestionLoaderHandler()">Jogar</button>
             <button class="Credits" onclick="document.getElementsByClassName('CreditsScreen')[0].style.display = 'block'; document.getElementsByClassName('MainMenu')[0].style.display = 'none';">Créditos</button>
         </div>
@@ -19,7 +21,6 @@
                 <button id="Answer3" onclick="verifyResponse(3)">Resposta3</button>
                 <button id="Answer4" onclick="verifyResponse(4)">Resposta4</button>
                 <button id="Answer5" onclick="verifyResponse(5)">Resposta5</button>
-                <button id="Answer6" onclick="verifyResponse(6)">Resposta6</button>
             </div>
         </div>
         <div class="Correct" style='display: none'>

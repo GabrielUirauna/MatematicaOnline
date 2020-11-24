@@ -1,13 +1,13 @@
 var CurrentQuestion = 0;
 
 const Questions = [
-    ['Pergunta1', 'RespostaCerta', 'RespostaErrada1', 'RespostaErrada2', 'RespostaErrada3', 'RespostaErrada4', 'RespostaErrada5'],
-    ['Pergunta2', 'RespostaCerta', 'RespostaErrada1', 'RespostaErrada2', 'RespostaErrada3', 'RespostaErrada4', 'RespostaErrada5'],
-    ['Pergunta3', 'RespostaCerta', 'RespostaErrada1', 'RespostaErrada2', 'RespostaErrada3', 'RespostaErrada4', 'RespostaErrada5'],
-    ['Pergunta4', 'RespostaCerta', 'RespostaErrada1', 'RespostaErrada2', 'RespostaErrada3', 'RespostaErrada4', 'RespostaErrada5'],
-    ['Pergunta5', 'RespostaCerta', 'RespostaErrada1', 'RespostaErrada2', 'RespostaErrada3', 'RespostaErrada4', 'RespostaErrada5'],
-    ['Pergunta6', 'RespostaCerta', 'RespostaErrada1', 'RespostaErrada2', 'RespostaErrada3', 'RespostaErrada4', 'RespostaErrada5'],
-    ['Pergunta7', 'RespostaCerta', 'RespostaErrada1', 'RespostaErrada2', 'RespostaErrada3', 'RespostaErrada4', 'RespostaErrada5']
+    ['Pergunta1', 'RespostaCerta', 'RespostaErrada1', 'RespostaErrada2', 'RespostaErrada3', 'RespostaErrada4'],
+    ['Pergunta2', 'RespostaCerta', 'RespostaErrada1', 'RespostaErrada2', 'RespostaErrada3', 'RespostaErrada4'],
+    ['Pergunta3', 'RespostaCerta', 'RespostaErrada1', 'RespostaErrada2', 'RespostaErrada3', 'RespostaErrada4'],
+    ['Pergunta4', 'RespostaCerta', 'RespostaErrada1', 'RespostaErrada2', 'RespostaErrada3', 'RespostaErrada4'],
+    ['Pergunta5', 'RespostaCerta', 'RespostaErrada1', 'RespostaErrada2', 'RespostaErrada3', 'RespostaErrada4'],
+    ['Pergunta6', 'RespostaCerta', 'RespostaErrada1', 'RespostaErrada2', 'RespostaErrada3', 'RespostaErrada4'],
+    ['Pergunta7', 'RespostaCerta', 'RespostaErrada1', 'RespostaErrada2', 'RespostaErrada3', 'RespostaErrada4']
 ]
 
 function shuffle(array) {
@@ -39,7 +39,6 @@ function QuestionLoaderHandler(NextQuestion) {
         QuestionAnswer3: document.getElementById('Answer3'),
         QuestionAnswer4: document.getElementById('Answer4'),
         QuestionAnswer5: document.getElementById('Answer5'),
-        QuestionAnswer6: document.getElementById('Answer6'),
         WinScreen: document.getElementsByClassName('Win')[0],
         MainMenuScreen: document.getElementsByClassName('MainMenu')[0],
         QuestionsScreen: document.getElementsByClassName('Questions')[0],
@@ -60,22 +59,12 @@ function QuestionLoaderHandler(NextQuestion) {
         return DOM.WinScreen.style.display = 'block';
     }
 
-    var questionOrder = [1,2,3,4,5,6];
+    var questionOrder = [1,2,3,4,5];
 
     questionOrder = shuffle(questionOrder);
-
-    var CorrectAnswer = questionOrder.indexOf(1);
     
     document.getElementsByClassName('Correct')[0].style.display = 'none';
     document.getElementsByClassName('Failed')[0].style.display = 'none';
-    DOM.QuestionAnswer1.className = '';
-    DOM.QuestionAnswer2.className = '';
-    DOM.QuestionAnswer3.className = '';
-    DOM.QuestionAnswer4.className = '';
-    DOM.QuestionAnswer5.className = '';
-    DOM.QuestionAnswer6.className = '';
-
-    document.getElementById('Answer'+(CorrectAnswer+1)).className='CA';
 
     DOM.QuestionTitle.innerHTML = Questions[CurrentQuestion][0];
     DOM.QuestionAnswer1.innerHTML = Questions[CurrentQuestion][questionOrder[0]];
@@ -83,11 +72,10 @@ function QuestionLoaderHandler(NextQuestion) {
     DOM.QuestionAnswer3.innerHTML = Questions[CurrentQuestion][questionOrder[2]];
     DOM.QuestionAnswer4.innerHTML = Questions[CurrentQuestion][questionOrder[3]];
     DOM.QuestionAnswer5.innerHTML = Questions[CurrentQuestion][questionOrder[4]];
-    DOM.QuestionAnswer6.innerHTML = Questions[CurrentQuestion][questionOrder[5]];
 }
 
 function verifyResponse(id) {
-    if(document.getElementById('Answer'+id).className !== 'CA') {
+    if(document.getElementById('Answer'+id).innerText !== Questions[CurrentQuestion][1]) {
         //The user click in a wrong answer
         document.getElementsByClassName('MainMenu')[0].style.display = 'none';
         document.getElementsByClassName('Questions')[0].style.display = 'none';
