@@ -11,6 +11,7 @@
             <h1 class="GameTitleMainMenu">Matemática Online</h1>
             <h3 class="GameSubTitleMainMenu">O jogo offline de matemática</h3>
             <div class="Buttons">
+                <button class="Rules" onclick="document.getElementsByClassName('RulesScreen')[0].style.display = 'block'; document.getElementsByClassName('MainMenu')[0].style.display = 'none';">Regras</button>
                 <button class="StartGame" onclick="QuestionLoaderHandler()">Jogar</button>
                 <button class="Credits" onclick="document.getElementsByClassName('CreditsScreen')[0].style.display = 'block'; document.getElementsByClassName('MainMenu')[0].style.display = 'none';">Créditos</button>
             </div>
@@ -41,6 +42,16 @@
             <p>João Francisco</p>
             <p>José Ricardo</p>
         </div>
+        <div class="RulesScreen" style='display: none'>
+            <button class="BackToMenuFromCredits" onclick="document.getElementsByClassName('RulesScreen')[0].style.display = 'none'; document.getElementsByClassName('MainMenu')[0].style.display = 'block';">Voltar</button>
+            <div class="Rulesp">
+                <p>O jogo se trata de um QUIZ matemático.</p>
+                <p>O jogo conta com 7 perguntas matemáticas.</p>
+                <p>O assunto retratado nas perguntas é equações do 2° grau.</p>
+                <p>Em todas as perguntas só existe uma alternativa correta.</p>
+                <p>Caso erre alguma questão deverá tentar novamente.</p>
+            </div>
+        </div>        
         <div class="Win" style="display: none">
             <h1 class="Parabens">PARABÉNS! Você ganhou o jogo. :D</h1>
             <button onclick='document.getElementsByClassName("Win")[0].style.display = "none"; document.getElementsByClassName("MainMenu")[0].style.display = "block"; CurrentQuestion=0'>Voltar ao inicio</button>
